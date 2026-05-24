@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayan Digital | Interactive Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-viewport">
+        <section class="hero-section">
+            <h1 class="giant-text">THIS</h1>
+            <p class="hero-sub">could be your website style.</p>
+        </section>
+
+        <main class="demo-section">
+            <div class="sticky-menu-header">
+                <h2>Choose Your Style</h2>
+                <div class="style-picker">
+                    <button class="style-pill active" onclick="setTheme('dark')">Dark</button>
+                    <button class="style-pill" onclick="setTheme('light')">Light</button>
+                    <button class="style-pill" onclick="setTheme('lime')">Lime</button>
+                </div>
+            </div>
+
+            <div class="menu-list">
+                <div class="food-item" onclick="openSlider('burger')">
+                    <div class="food-meta">
+                        <h3>Truffle Smash Burger</h3>
+                        <span class="food-price">3.250 KWD</span>
+                    </div>
+                    <p class="food-desc">Double wagyu beef, black truffle aioli, sharp cheddar.</p>
+                </div>
+
+                <div class="food-item" onclick="openSlider('matcha')">
+                    <div class="food-meta">
+                        <h3>Ceremonial Matcha Latte</h3>
+                        <span class="food-price">2.500 KWD</span>
+                    </div>
+                    <p class="food-desc">Stoneground Uji matcha, premium organic oat milk.</p>
+                </div>
+            </div>
+        </main>
+
+        <section class="reassurance-section">
+            <h3 class="alt-giant-text">Don't like it?</h3>
+            <h2 class="giant-text">THEN</h2>
+            <h3 class="alt-giant-text">change it.</h3>
+            <p class="pitch-sub">We build 100% custom layouts built from scratch exactly the way you picture your brand.</p>
+        </section>
+
+        <footer class="footer-cta">
+            <a href="https://wa.me/96512345678?text=Hello%20Kayan%20Digital,%20I%20scanned%20your%20QR%20code%20and%20want%20to%20discuss%20a%20menu" class="cta-link" target="_blank">
+                Let's Build Your Vision
+            </a>
+        </footer>
+    </div>
+
+    <div class="panel-overlay" id="panelOverlay" onclick="closeSlider()"></div>
+    <div class="bottom-sliding-sheet" id="bottomSheet">
+        <button class="panel-close-trigger" onclick="closeSlider()">✕</button>
+        <div id="dynamicContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
